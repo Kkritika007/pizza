@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order Pizza">
+  <meta name=" robots" content=" noindex, nofollow">
+  <title>Pizza Order Form</title>
+  <!--adding font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+<!--linking css file-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="element">
+<header><h1>Order your pizza here</h1></header>
+
+
+<main>
+  <form action="/submit_order" method="post">
+    <!-- Text input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <!-- Email input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Number input -->
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <!-- Radio input -->
+    <label>Choose Pizza Size:</label>
+    <div>
+      <input type="radio" id="small" name="size" value="small" required>
+      <label for="small">Small</label>
+    </div>
+    <div>
+      <input type="radio" id="medium" name="size" value="medium" required>
+      <label for="medium">Medium</label>
+    </div>
+    <div>
+      <input type="radio" id="large" name="size" value="large" required>
+      <label for="large">Large</label>
+    </div>
+
+    <!-- Checkbox input -->
+    <label>Choose Toppings:</label>
+    <div>
+      <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+    <div>
+      <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+    <div>
+      <input type="checkbox" id="onions" name="toppings[]" value="onions">
+      <label for="onions">Onions</label>
+    </div>
+    <div>
+      <input type="checkbox" id="redpepper" name="toppings[]" value="redpepper">
+      <label for="onions"> Red Pepper </label>
+    </div>
+
+    <!-- Select input -->
+    <label for="crust">Choose Crust:</label>
+    <select id="crust" name="crust" required>
+      <option value="thin">Thin Crust</option>
+      <option value="thick">Thick Crust</option>
+      <option value="stuffed">Stuffed Crust</option>
+    </select>
+
+    <!-- Submit button -->
+    <button type="submit">Place Order</button>
+  </form></main>
+</body>
+<footer>
+  <p> &copy; 2023 #Pizza. All rights reserved.</p>
+</footer>
+</html>
+
